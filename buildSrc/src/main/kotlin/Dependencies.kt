@@ -34,7 +34,7 @@ object KotlinLibraries {
 
 object DILibraries {
     object Versions {
-        const val hilt = "2.28-alpha"
+        const val hilt = "2.33-beta"
         const val lifecycle = "1.0.0-alpha01"
     }
 
@@ -106,7 +106,7 @@ object TestAndroidLibraries {
         const val androidJUnit = "1.1.2"
         const val androidEspresso = "3.3.0"
         const val archCore = "2.1.0"
-        const val hilt = "2.28-alpha"
+        const val hilt = "2.33-beta"
     }
 
     const val androidJUnit = "androidx.test.ext:junit:${Versions.androidJUnit}"

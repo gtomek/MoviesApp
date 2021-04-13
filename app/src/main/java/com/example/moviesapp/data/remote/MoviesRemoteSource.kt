@@ -3,6 +3,7 @@ package com.example.moviesapp.data.remote
 import com.example.moviesapp.BuildConfig
 import com.example.moviesapp.data.remote.model.RemoteMovie
 import com.example.moviesapp.data.remote.model.RemoteMoviesResponse
+import com.example.moviesapp.di.BaseUrl
 import io.ktor.client.*
 import io.ktor.client.engine.cio.*
 import io.ktor.client.features.*
@@ -10,15 +11,19 @@ import io.ktor.client.features.json.*
 import io.ktor.client.features.logging.*
 import io.ktor.client.request.*
 import io.ktor.http.*
+import timber.log.Timber
 import javax.inject.Inject
 
-class MoviesRemoteSource @Inject constructor() {
+class MoviesRemoteSource @Inject constructor(
+    @BaseUrl baseUrl: String
+) {
 
     private val client = HttpClient(CIO) {
+        Timber.v("Client created with base url: $baseUrl")
         defaultRequest {
             url {
                 protocol = URLProtocol.HTTPS
-                host = HOST
+                host = baseUrl
                 encodedPath = VERSION + url.encodedPath
             }
         }
