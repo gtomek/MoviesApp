@@ -2,15 +2,19 @@
 buildscript {
     repositories {
         google()
+        gradlePluginPortal()
         jcenter()
     }
     dependencies {
-        classpath "com.android.tools.build:gradle:4.1.2"
+        classpath 'com.android.tools.build:gradle:7.0.3'
         classpath KotlinLibraries.gradlePlugin
         classpath DILibraries.gradlePlugin
         classpath NavigationLibraries.safeArgs
+        classpath "com.github.ben-manes:gradle-versions-plugin:0.39.0"
     }
 }
+
+apply plugin: "com.github.ben-manes.versions"
 
 allprojects {
     repositories {

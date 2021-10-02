@@ -5,12 +5,12 @@ import com.example.moviesapp.domain.repository.MoviesRepository
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ApplicationComponent
+import dagger.hilt.components.SingletonComponent
 
-@InstallIn(ApplicationComponent::class)
+@InstallIn(SingletonComponent::class)
 @Module
 abstract class DataModule {
 
     @Binds
-    abstract fun MoviesDataRepository.binds(): MoviesRepository
+    abstract fun bindsMoviesRepository(moviesDataRepository: MoviesDataRepository): MoviesRepository
 }

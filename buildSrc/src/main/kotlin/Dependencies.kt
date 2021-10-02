@@ -6,50 +6,55 @@ object AndroidSdk {
 
 object AndroidLibraries {
     object Versions {
-        const val core = "1.3.1"
+        const val core = "1.6.0"
         const val appCompat = "1.2.0"
-        const val material = "1.2.1"
-        const val constraintLayout = "2.0.4"
-        const val lifecycleViewModel = "2.2.0"
+        const val material = "1.4.0"
+        const val constraintLayout = "2.1.1"
+        const val lifecycleViewModel = "2.3.1"
     }
 
     const val core = "androidx.core:core-ktx:${Versions.core}"
     const val appCompat = "androidx.appcompat:appcompat:${Versions.appCompat}"
     const val material = "com.google.android.material:material:${Versions.material}"
-    const val constraintLayout = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
-    const val lifecycleViewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycleViewModel}"
+    const val constraintLayout =
+        "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
+    const val lifecycleViewModel =
+        "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycleViewModel}"
 }
 
 object KotlinLibraries {
     object Versions {
-        const val kotlin = "1.4.21"
-        const val coroutines = "1.4.2"
+        const val kotlin = "1.5.31"
+        const val coroutines = "1.5.2"
     }
 
     const val kotlinStdLibrary = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.kotlin}"
-    const val coroutinesCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
-    const val coroutinesAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines}"
+    const val coroutinesCore =
+        "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
+    const val coroutinesAndroid =
+        "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines}"
     const val gradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
 }
 
 object DILibraries {
     object Versions {
-        const val hilt = "2.28-alpha"
-        const val lifecycle = "1.0.0-alpha01"
+        const val hilt = "2.39"
+        const val lifecycle = "1.0.0"
+        const val lifecycleViewmodel = "1.0.0-alpha03"
     }
 
     const val hilt = "com.google.dagger:hilt-android:${Versions.hilt}"
-    const val lifecycle = "androidx.hilt:hilt-lifecycle-viewmodel:${Versions.lifecycle}"
-    const val kaptHilt =  "com.google.dagger:hilt-android-compiler:${Versions.hilt}"
-    const val kaptLifecycle =  "androidx.hilt:hilt-compiler:${Versions.lifecycle}"
+    const val lifecycle = "androidx.hilt:hilt-lifecycle-viewmodel:${Versions.lifecycleViewmodel}"
+    const val kaptHilt = "com.google.dagger:hilt-android-compiler:${Versions.hilt}"
+    const val kaptLifecycle = "androidx.hilt:hilt-compiler:${Versions.lifecycle}"
 
     const val gradlePlugin = "com.google.dagger:hilt-android-gradle-plugin:${Versions.hilt}"
 }
 
 object NetworkLibraries {
     object Versions {
-        const val ktor = "1.5.0"
-        const val coil = "1.1.1"
+        const val ktor = "1.6.3"
+        const val coil = "1.3.2"
     }
 
     const val ktorAndroid = "io.ktor:ktor-client-android:${Versions.ktor}"
@@ -61,7 +66,7 @@ object NetworkLibraries {
 
 object PersistenceLibraries {
     object Versions {
-        const val room = "2.2.6"
+        const val room = "2.3.0"
     }
 
     const val room = "androidx.room:room-runtime:${Versions.room}"
@@ -71,7 +76,7 @@ object PersistenceLibraries {
 
 object NavigationLibraries {
     object Versions {
-        const val nav = "2.3.2"
+        const val nav = "2.3.5"
     }
 
     const val navigationFragment = "androidx.navigation:navigation-fragment-ktx:${Versions.nav}"
@@ -81,7 +86,7 @@ object NavigationLibraries {
 
 object LoggingLibraries {
     object Versions {
-        const val timber = "4.7.1"
+        const val timber = "5.0.1"
     }
 
     const val timber = "com.jakewharton.timber:timber:${Versions.timber}"
@@ -89,9 +94,9 @@ object LoggingLibraries {
 
 object TestLibraries {
     object Versions {
-        const val jUnit = "4.13.1"
-        const val mockk = "1.10.5"
-        const val coroutines = "1.4.2"
+        const val jUnit = "4.13.2"
+        const val mockk = "1.12.0"
+        const val coroutines = "1.5.2"
         const val kotest = "4.3.2"
     }
 
@@ -106,7 +111,7 @@ object TestAndroidLibraries {
         const val androidJUnit = "1.1.2"
         const val androidEspresso = "3.3.0"
         const val archCore = "2.1.0"
-        const val hilt = "2.28-alpha"
+        const val hilt = "2.39"
     }
 
     const val androidJUnit = "androidx.test.ext:junit:${Versions.androidJUnit}"

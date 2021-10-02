@@ -59,6 +59,7 @@ class MovieDetailFragment : Fragment() {
             is LoadingState -> showLoading()
             is SuccessfulState -> showMovie(state.movie)
             is FailureState -> showFailure(state.error)
+            IdleState -> Timber.v("State idle")
         }
     }
 

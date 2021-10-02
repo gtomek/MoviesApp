@@ -1,18 +1,20 @@
 package com.example.moviesapp.presentation.detail.viewmodel
 
-import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.moviesapp.domain.usecase.GetMovieByIdUseCase
 import com.example.moviesapp.presentation.detail.event.MovieDetailEvent
-import com.example.moviesapp.presentation.detail.event.MovieDetailEvent.*
+import com.example.moviesapp.presentation.detail.event.MovieDetailEvent.OpenMovieDetailsEvent
 import com.example.moviesapp.presentation.detail.state.MovieDetailState
 import com.example.moviesapp.presentation.detail.state.MovieDetailState.FailureState
 import com.example.moviesapp.presentation.detail.state.MovieDetailState.IdleState
 import com.example.moviesapp.presentation.mapper.PresentationMovieMapper
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.*
+import javax.inject.Inject
 
-class MovieDetailViewModel @ViewModelInject constructor(
+@HiltViewModel
+class MovieDetailViewModel @Inject constructor(
     private val getMovieByIdUseCase: GetMovieByIdUseCase,
     private val mapper: PresentationMovieMapper
 ) : ViewModel() {
